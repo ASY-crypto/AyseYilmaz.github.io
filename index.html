@@ -149,13 +149,13 @@
         <canvas id="neuroCanvas"></canvas>
     </div>
 
-    <!-- Navigasyon Çubuğu: max-w-7xl ve px-6 ile Hero içeriğine hizalandı -->
+    <!-- Navigasyon Çubuğu: max-w-7xl ve px-8 ile Hero içeriğine (ana başlığa) hizalandı -->
     <nav class="fixed w-full z-50 transition-all duration-300 p-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center glass-panel rounded-full px-8 py-3">
-            <!-- Sol Kısım: Başlıkla hizalanmış başlangıç noktası -->
+            <!-- Sol Kısım: Başlığın başlangıç hizasıyla dikeyde aynı noktadadır -->
             <div class="flex flex-col items-start justify-center leading-tight select-none cursor-default">
                 <span class="text-sm md:text-base text-sky-400 font-bold tracking-widest uppercase font-futuristic">Biomedical Engineer</span>
-                <div class="text-[10px] md:text-xs text-slate-400 font-medium tracking-wider">
+                <div class="text-[10px] md:text-xs text-slate-400 font-medium tracking-wider mt-0.5">
                     Data Scientist <span class="text-sky-600 mx-1">|</span> AI Researcher
                 </div>
             </div>
@@ -178,7 +178,7 @@
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center w-full">
             <div class="order-2 md:order-1 flex flex-col items-start">
                 
-                <!-- Ana Başlık -->
+                <!-- Ana Başlık: Navbar'daki unvanla aynı hizada başlar -->
                 <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight fade-in-up delay-100 text-glow font-futuristic">
                     Pioneering <span class="text-sky-400">AI</span> in <br class="hidden md:block"> Biomedical
                 </h1>
@@ -276,10 +276,10 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-6 text-white">Tools & Frameworks</h3>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-emerald-200">Pandas & NumPy</span>
-                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-emerald-200">Tensorflow</span>
-                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-emerald-200">MATLAB</span>
-                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-emerald-200">Generative AI Tools</span>
+                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-sky-200">Pandas & NumPy</span>
+                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-sky-200">Tensorflow</span>
+                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-sky-200">MATLAB</span>
+                        <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-lg text-sm font-medium text-sky-200">Generative AI Tools</span>
                     </div>
                 </div>
             </div>
@@ -298,7 +298,7 @@
                     </div>
                     <p class="text-sm text-slate-400 mb-4 font-mono">Team Captain</p>
                     <p class="text-slate-300 mb-4 font-light flex-grow">
-                        Computer Vision Analysis of Mammography & NLP in Radiology Reports. Developed a hybrid AI model to analyze textual radiology reports and images.
+                        Computer Vision Analysis of Mammography & NLP in Radiology Reports. Developed a hybrid AI model to analyze textual radiology reports and images for enhanced diagnostic accuracy.
                     </p>
                 </div>
 
@@ -394,7 +394,7 @@
                         <h3 class="text-2xl font-bold text-white">Pamukkale University</h3>
                         <p class="text-sky-400 text-lg font-medium">BS in Biomedical Engineering</p>
                         <p class="text-slate-500 text-sm mb-4 font-mono mt-1">2020 – 2024</p>
-                        <p class="text-slate-300 text-sm italic bg-slate-800/50 p-4 rounded-lg">Thesis: Deep Learning in Spine X-Ray Image Analysis.</p>
+                        <p class="text-slate-300 text-sm italic bg-slate-800/50 p-4 rounded-lg border border-slate-700/50">Thesis: Deep Learning in Spine X-Ray Image Analysis.</p>
                     </div>
                     <div class="relative pl-8 border-l-2 border-slate-700">
                         <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-600 rounded-full"></div>
@@ -411,11 +411,17 @@
                     <ul class="space-y-6">
                         <li class="flex items-start gap-4">
                             <i class="fas fa-certificate text-yellow-500 mt-1 text-xl"></i>
-                            <div><strong class="text-white block text-lg">Data Science Expertise</strong><span class="text-slate-400 text-sm">Europe Coding School</span></div>
+                            <div>
+                                <strong class="text-white block text-lg">Data Science Expertise</strong>
+                                <span class="text-slate-400 text-sm">Europe Coding School (Online)</span>
+                            </div>
                         </li>
                         <li class="flex items-start gap-4">
                             <i class="fas fa-certificate text-sky-500 mt-1 text-xl"></i>
-                            <div><strong class="text-white block text-lg">Goldsite GSH-60 Technical</strong><span class="text-slate-400 text-sm">GOLDSITE Inc.</span></div>
+                            <div>
+                                <strong class="text-white block text-lg">Goldsite GSH-60 Technical Cert.</strong>
+                                <span class="text-slate-400 text-sm">GOLDSITE Inc. | 2024</span>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -423,21 +429,31 @@
         </div>
     </section>
 
-    <!-- Footer / Contact -->
+    <!-- Footer / İletişim Bölümü: Telefon Numarası Tekrar Eklendi -->
     <footer id="contact" class="py-16 mt-auto relative z-10 border-t border-slate-800 bg-slate-900">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-8 font-futuristic text-glow">Let's Design the Future Together</h2>
             <div class="flex flex-col md:flex-row justify-center gap-8 mb-10 text-slate-300">
+                <!-- Konum -->
                 <div class="flex items-center justify-center gap-3">
                     <i class="fas fa-map-marker-alt text-sky-500"></i>
                     <span>Izmir, Turkey</span>
                 </div>
+                <!-- Telefon Numarası (Tekrar Eklendi) -->
+                <div class="flex items-center justify-center gap-3">
+                    <i class="fas fa-phone text-sky-500"></i>
+                    <span>+90 534 087 9974</span>
+                </div>
+                <!-- E-posta -->
                 <div class="flex items-center justify-center gap-3">
                     <i class="fas fa-envelope text-sky-500"></i>
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yilmazysesidenur@gmail.com" target="_blank" class="hover:text-white transition-colors">yilmazysesidenur@gmail.com</a>
                 </div>
             </div>
-            <div class="mt-8 text-slate-600 text-sm">&copy; 2024 Ayşe Sidenur Yılmaz. All Rights Reserved.</div>
+            
+            <div class="mt-8 text-slate-600 text-sm">
+                &copy; 2024 Ayşe Sidenur Yılmaz. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
