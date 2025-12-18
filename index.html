@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* Modern ve "Güzel" Font: Outfit ve Orbitron */
+        /* Modern ve Şık Fontlar: Outfit ve Orbitron */
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Orbitron:wght@600;800&display=swap');
 
         body {
@@ -19,7 +19,7 @@
             color: #e2e8f0;
         }
 
-        /* Canvas Arka Plan */
+        /* Arka Plan Efekti */
         #canvas-container {
             position: fixed;
             top: 0;
@@ -30,7 +30,7 @@
             background: radial-gradient(circle at center, #1e293b 0%, #020617 100%);
         }
 
-        /* Glassmorphism Araçları */
+        /* Glassmorphism Panelleri */
         .glass-panel {
             background: rgba(15, 23, 42, 0.7);
             backdrop-filter: blur(16px);
@@ -53,7 +53,6 @@
             box-shadow: 0 10px 40px -10px rgba(56, 189, 248, 0.2);
         }
 
-        /* Tipografi ve Efektler */
         .font-futuristic {
             font-family: 'Orbitron', sans-serif;
         }
@@ -79,7 +78,7 @@
             border-radius: 2px;
         }
 
-        /* Navigasyon */
+        /* Menü Linkleri */
         .nav-link {
             position: relative;
             cursor: pointer;
@@ -103,7 +102,7 @@
             width: 100%;
         }
 
-        /* Zaman Tüneli */
+        /* Timeline Stili */
         .timeline-item {
             position: relative;
             padding-left: 2rem;
@@ -173,21 +172,25 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col">
 
-    <!-- Canvas Arka Plan Kabı -->
+    <!-- Canvas Arka Plan -->
     <div id="canvas-container">
         <canvas id="neuroCanvas"></canvas>
     </div>
 
     <!-- Navigasyon Çubuğu -->
     <nav class="fixed w-full z-50 transition-all duration-300 p-2 md:p-4">
-        <div class="max-w-6xl mx-auto flex justify-between items-center glass-panel rounded-full px-6 py-2">
+        <!-- padding dengelendi (py-3) -->
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-panel rounded-full px-8 py-3">
             <div class="flex flex-col items-start justify-center leading-tight select-none cursor-default">
-                <span class="text-sm text-sky-400 font-bold tracking-widest uppercase font-futuristic">Biomedical Engineer</span>
-                <div class="text-xs text-slate-400 font-medium tracking-wider mt-0.5">
-                    Data Scientist <span class="text-sky-600 mx-0.5">|</span> AI Researcher
+                <!-- Unvanlar ideal boyuta getirildi (text-base md:text-lg) -->
+                <span class="text-base md:text-lg text-sky-400 font-bold tracking-widest uppercase font-futuristic">Biomedical Engineer</span>
+                <!-- Alt metin orantılı küçültüldü (text-[10px] md:text-xs) -->
+                <div class="text-[10px] md:text-xs text-slate-400 font-medium tracking-wider mt-0.5">
+                    Data Scientist <span class="text-sky-600 mx-1">|</span> AI Researcher
                 </div>
             </div>
             
+            <!-- Menü Linkleri -->
             <div class="hidden lg:flex space-x-6 text-slate-300">
                 <a href="#home" class="nav-link hover:text-white text-sm font-semibold tracking-wide">HOME</a>
                 <a href="#about" class="nav-link hover:text-white text-sm font-semibold tracking-wide">MY VISION</a>
@@ -201,14 +204,14 @@
     </nav>
 
     <!-- Giriş (Hero) Bölümü -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-24">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 pb-12">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight fade-in-up delay-100 text-glow font-futuristic">
                     Pioneering <span class="text-sky-400">AI</span> in <br class="hidden md:block"> Biomedical
                 </h1>
                 
-                <h2 class="text-2xl md:text-3xl text-sky-400 font-medium mb-8 fade-in-up delay-200 tracking-wide">
+                <h2 class="text-2xl md:text-4xl text-sky-400 font-medium mb-8 fade-in-up delay-200 tracking-wide">
                     Ayşe Sidenur YILMAZ
                 </h2>
 
@@ -218,17 +221,14 @@
                 </p>
 
                 <div class="flex flex-row gap-3 fade-in-up delay-300 items-center">
-                    <!-- E-posta Butonu -->
                     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yilmazysesidenur@gmail.com" target="_blank" class="flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-lg font-bold hover:bg-sky-50 transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(56,189,248,0.3)] transform hover:-translate-y-0.5 text-sm">
                         <i class="fas fa-envelope text-lg text-sky-600"></i>
-                        <span>E-mail</span>
+                        <span>Send e-mail</span>
                     </a>
-                    <!-- LinkedIn Butonu -->
                     <a href="https://www.linkedin.com/in/ayse-yilmaz-7b824a308" target="_blank" class="flex items-center gap-2 px-5 py-2.5 bg-white rounded-lg font-bold hover:bg-sky-50 transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(56,189,248,0.3)] transform hover:-translate-y-0.5 text-sm">
                         <i class="fab fa-linkedin text-lg" style="color: #0A66C2;"></i>
                         <span style="color: #0A66C2;">LinkedIn</span>
                     </a>
-                    <!-- GitHub Butonu -->
                     <a href="https://github.com/ASY-crypto?tab=repositories" target="_blank" class="flex items-center gap-2 px-5 py-2.5 bg-white text-slate-900 rounded-lg font-bold hover:bg-sky-50 transition-all shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(56,189,248,0.3)] transform hover:-translate-y-0.5 text-sm">
                         <i class="fab fa-github text-lg text-slate-900"></i>
                         <span>GitHub</span>
@@ -236,16 +236,14 @@
                 </div>
             </div>
 
-            <!-- Profil Fotoğrafı ve Dekoratif Gruplar -->
+            <!-- Profil Fotoğrafı -->
             <div class="order-1 md:order-2 flex justify-center fade-in-up delay-200">
-                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-full glass-panel flex items-center justify-center border-4 border-sky-500/10 backdrop-blur-xl overflow-visible p-1">
-                    <!-- Belirtilen linkteki resim eklendi -->
+                <div class="relative w-80 h-80 md:w-96 md:h-96 rounded-full glass-panel flex items-center justify-center border-4 border-sky-500/10 backdrop-blur-xl overflow-visible p-1">
                     <img src="https://raw.githubusercontent.com/ASY-crypto/AyseYilmaz.github.io/refs/heads/main/src/resmim.jpeg" 
                          alt="Ayşe Sidenur Yılmaz" 
                          class="w-full h-full object-cover rounded-full shadow-[0_0_20px_rgba(56,189,248,0.3)] border-2 border-white/10"
                          onerror="this.src='https://via.placeholder.com/400?text=Profile+Photo'">
                     
-                    <!-- Dekoratif Dönen Halkalar -->
                     <div class="absolute -inset-6 border border-sky-400/20 rounded-full animate-[spin_12s_linear_infinite] pointer-events-none"></div>
                     <div class="absolute -inset-12 border border-dashed border-sky-400/10 rounded-full animate-[spin_20s_linear_infinite_reverse] pointer-events-none"></div>
                 </div>
@@ -274,7 +272,6 @@
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center font-futuristic">Technical Skills</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Temel Teknolojiler -->
                 <div class="glass-card p-8 rounded-2xl">
                     <div class="w-14 h-14 rounded-2xl bg-sky-500/20 flex items-center justify-center mb-6 text-sky-400 shadow-[0_0_15px_rgba(56,189,248,0.2)]">
                         <i class="fas fa-code text-2xl"></i>
@@ -291,7 +288,6 @@
                     </div>
                 </div>
 
-                <!-- Biyomedikal Yetenekler -->
                 <div class="glass-card p-8 rounded-2xl">
                     <div class="w-14 h-14 rounded-2xl bg-red-500/20 flex items-center justify-center mb-6 text-red-400 shadow-[0_0_15px_rgba(239,68,68,0.2)]">
                         <i class="fas fa-heartbeat text-2xl"></i>
@@ -306,7 +302,6 @@
                     </ul>
                 </div>
 
-                <!-- Araçlar ve Framework'ler -->
                 <div class="glass-card p-8 rounded-2xl">
                     <div class="w-14 h-14 rounded-2xl bg-emerald-500/20 flex items-center justify-center mb-6 text-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
                         <i class="fas fa-tools text-2xl"></i>
@@ -331,7 +326,6 @@
         <div class="max-w-5xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title font-futuristic">Experience</h2>
             <div class="space-y-12">
-                
                 <div class="timeline-item">
                     <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
                         <div class="flex flex-col md:flex-row justify-between mb-4">
@@ -381,7 +375,6 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -390,9 +383,7 @@
     <section id="projects" class="py-20 bg-slate-900/40 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 section-title font-futuristic">Projects & Research</h2>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- VisionaryHealth -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold text-white hover-line">VisionaryHealth</h3>
@@ -404,7 +395,6 @@
                     </p>
                 </div>
 
-                <!-- TÜBİTAK -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold text-white hover-line">TÜBİTAK 2209-A Project</h3>
@@ -415,7 +405,6 @@
                     </p>
                 </div>
 
-                <!-- BAP Projesi -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold text-white hover-line">Scientific Research (BAP)</h3>
@@ -426,7 +415,6 @@
                     </p>
                 </div>
 
-                <!-- BioMed-AI -->
                 <div class="glass-card p-8 rounded-2xl flex flex-col">
                     <div class="flex justify-between items-start mb-4">
                         <h3 class="text-xl font-bold text-white hover-line">BioMed-AI</h3>
@@ -441,11 +429,9 @@
         </div>
     </section>
 
-    <!-- Eğitim ve Sertifikalar Bölümü -->
+    <!-- Eğitim Bölümü -->
     <section id="education" class="py-20 relative z-10">
         <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-            
-            <!-- Eğitim Bilgileri -->
             <div>
                 <h2 class="text-3xl font-bold mb-8 section-title font-futuristic">Education</h2>
                 <div class="space-y-10">
@@ -471,7 +457,6 @@
                 </div>
             </div>
 
-            <!-- Sertifika Bilgileri -->
             <div>
                 <h2 class="text-3xl font-bold mb-8 section-title font-futuristic">Certifications</h2>
                 <div class="glass-panel p-8 rounded-2xl">
@@ -510,7 +495,7 @@
         </div>
     </section>
 
-    <!-- Yayınlar ve Ödüller Bölümü -->
+    <!-- Yayınlar Bölümü -->
     <section class="py-20 bg-slate-900/40 relative z-10">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold mb-8 section-title font-futuristic">Publications & Awards</h2>
@@ -557,7 +542,7 @@
         </div>
     </section>
 
-    <!-- Sayfa Alt Bilgisi / İletişim -->
+    <!-- Footer -->
     <footer id="contact" class="py-16 mt-auto relative z-10 border-t border-slate-800 bg-slate-900">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-8 font-futuristic">Let's Design the Future Together</h2>
@@ -582,13 +567,11 @@
         </div>
     </footer>
 
-    <!-- Canvas Mantığı -->
+    <!-- Canvas Script -->
     <script>
         const canvas = document.getElementById('neuroCanvas');
         const ctx = canvas.getContext('2d');
-
-        let width, height;
-        let particles = [];
+        let width, height, particles = [];
         
         const config = {
             particleCount: 80, 
@@ -607,28 +590,10 @@
             height = window.innerHeight;
             canvas.width = width;
             canvas.height = height;
-            
-            if (width < 768) {
-                config.particleCount = 40;
-                config.connectionDistance = 100;
-            } else {
-                config.particleCount = 80;
-                config.connectionDistance = 140;
-            }
             initParticles();
         }
 
         window.addEventListener('resize', resize);
-
-        const mouse = { x: null, y: null };
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = e.x;
-            mouse.y = e.y;
-        });
-        window.addEventListener('mouseleave', () => {
-            mouse.x = null;
-            mouse.y = null;
-        });
 
         class Particle {
             constructor() {
@@ -640,56 +605,27 @@
                 this.pulse = Math.random() * Math.PI;
                 this.isHealthNode = Math.random() > 0.85; 
             }
-
             update() {
-                this.x += this.vx;
-                this.y += this.vy;
-
+                this.x += this.vx; this.y += this.vy;
                 if (this.x < 0 || this.x > width) this.vx *= -1;
                 if (this.y < 0 || this.y > height) this.vy *= -1;
-
-                if (mouse.x != null) {
-                    let dx = mouse.x - this.x;
-                    let dy = mouse.y - this.y;
-                    let distance = Math.sqrt(dx * dx + dy * dy);
-                    
-                    if (distance < config.mouseDistance) {
-                        const forceDirectionX = dx / distance;
-                        const forceDirectionY = dy / distance;
-                        const force = (config.mouseDistance - distance) / config.mouseDistance;
-                        const direction = -1; 
-                        
-                        this.vx += forceDirectionX * force * direction * 0.05;
-                        this.vy += forceDirectionY * force * direction * 0.05;
-                    }
-                }
                 this.pulse += 0.05;
             }
-
             draw() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                const pulseScale = Math.sin(this.pulse) * 0.5 + 1;
-                
                 if (this.isHealthNode) {
                     ctx.fillStyle = config.colors.healthPulse;
-                    ctx.shadowBlur = 15 * pulseScale;
-                    ctx.shadowColor = 'rgba(239, 68, 68, 0.5)';
                 } else {
                     ctx.fillStyle = config.colors.particle;
-                    ctx.shadowBlur = 5;
-                    ctx.shadowColor = config.colors.particle;
                 }
                 ctx.fill();
-                ctx.shadowBlur = 0;
             }
         }
 
         function initParticles() {
             particles = [];
-            for (let i = 0; i < config.particleCount; i++) {
-                particles.push(new Particle());
-            }
+            for (let i = 0; i < config.particleCount; i++) particles.push(new Particle());
         }
 
         function animate() {
@@ -697,19 +633,13 @@
             for (let i = 0; i < particles.length; i++) {
                 particles[i].update();
                 particles[i].draw();
-                for (let j = i; j < particles.length; j++) {
+                for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
                     if (distance < config.connectionDistance) {
                         ctx.beginPath();
-                        const opacity = 1 - (distance / config.connectionDistance);
-                        if(particles[i].isHealthNode || particles[j].isHealthNode) {
-                             ctx.strokeStyle = `rgba(239, 68, 68, ${opacity * 0.4})`;
-                        } else {
-                             ctx.strokeStyle = `rgba(56, 189, 248, ${opacity * 0.4})`;
-                        }
-                        ctx.lineWidth = 1;
+                        ctx.strokeStyle = `rgba(56, 189, 248, ${1 - distance / config.connectionDistance})`;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();
@@ -718,11 +648,7 @@
             }
             requestAnimationFrame(animate);
         }
-
-        window.onload = function () {
-            resize();
-            animate();
-        }
+        window.onload = () => { resize(); animate(); }
     </script>
 </body>
 </html>
