@@ -149,26 +149,28 @@
         <canvas id="neuroCanvas"></canvas>
     </div>
 
-    <!-- Navigasyon Çubuğu: max-w-7xl ve px-8 ile Hero içeriğine (ana başlığa) hizalandı -->
+    <!-- Navigasyon Çubuğu: max-w-7xl ve px-6 Hero içeriğiyle tam dikey hizalama sağlar -->
     <nav class="fixed w-full z-50 transition-all duration-300 p-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass-panel rounded-full px-8 py-3">
-            <!-- Sol Kısım: Başlığın başlangıç hizasıyla dikeyde aynı noktadadır -->
-            <div class="flex flex-col items-start justify-center leading-tight select-none cursor-default">
-                <span class="text-sm md:text-base text-sky-400 font-bold tracking-widest uppercase font-futuristic">Biomedical Engineer</span>
-                <div class="text-[10px] md:text-xs text-slate-400 font-medium tracking-wider mt-0.5">
-                    Data Scientist <span class="text-sky-600 mx-1">|</span> AI Researcher
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center glass-panel rounded-full px-8 py-3 w-full">
+                <!-- Sol Kısım: Başlığın başlangıç çizgisiyle dikeyde tam aynı noktadadır -->
+                <div class="flex flex-col items-start justify-center leading-tight select-none cursor-default">
+                    <span class="text-sm md:text-base text-sky-400 font-bold tracking-widest uppercase font-futuristic">Biomedical Engineer</span>
+                    <div class="text-[10px] md:text-xs text-slate-400 font-medium tracking-wider mt-0.5">
+                        Data Scientist <span class="text-sky-600 mx-1">|</span> AI Researcher
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Sağ Kısım: Menü Linkleri -->
-            <div class="hidden lg:flex space-x-6 text-slate-300">
-                <a href="#home" class="nav-link hover:text-white uppercase">Home</a>
-                <a href="#about" class="nav-link hover:text-white uppercase">My Vision</a>
-                <a href="#skills" class="nav-link hover:text-white uppercase">Skills</a>
-                <a href="#projects" class="nav-link hover:text-white uppercase">Projects</a>
-                <a href="#experience" class="nav-link hover:text-white uppercase">Experience</a>
-                <a href="#education" class="nav-link hover:text-white uppercase">Education</a>
-                <a href="#contact" class="nav-link hover:text-white uppercase">Contact</a>
+                
+                <!-- Sağ Kısım: Menü Linkleri -->
+                <div class="hidden lg:flex space-x-6 text-slate-300">
+                    <a href="#home" class="nav-link hover:text-white uppercase">Home</a>
+                    <a href="#about" class="nav-link hover:text-white uppercase">My Vision</a>
+                    <a href="#skills" class="nav-link hover:text-white uppercase">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-white uppercase">Projects</a>
+                    <a href="#experience" class="nav-link hover:text-white uppercase">Experience</a>
+                    <a href="#education" class="nav-link hover:text-white uppercase">Education</a>
+                    <a href="#contact" class="nav-link hover:text-white uppercase">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -178,7 +180,7 @@
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center w-full">
             <div class="order-2 md:order-1 flex flex-col items-start">
                 
-                <!-- Ana Başlık: Navbar'daki unvanla aynı hizada başlar -->
+                <!-- Ana Başlık: Navbar'daki unvanla tam aynı hizada başlar -->
                 <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight fade-in-up delay-100 text-glow font-futuristic">
                     Pioneering <span class="text-sky-400">AI</span> in <br class="hidden md:block"> Biomedical
                 </h1>
@@ -366,19 +368,6 @@
                         <p class="text-slate-300 font-light">Experience in manufacturing spinal implants and biomechanical testing protocols.</p>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="bg-slate-800/40 p-8 rounded-2xl border border-slate-700/50 hover:bg-slate-800/60 transition-colors">
-                        <div class="flex flex-col md:flex-row justify-between mb-4">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">Clinical Engineering Intern</h3>
-                                <p class="text-sky-400 font-medium mt-1">Pamukkale University Hospitals | Denizli</p>
-                            </div>
-                            <span class="text-slate-400 text-sm mt-2 md:mt-0 font-mono">June 2022 – July 2022</span>
-                        </div>
-                        <p class="text-slate-300 font-light">Executed preventive maintenance and calibration on life-support equipment.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -429,7 +418,54 @@
         </div>
     </section>
 
-    <!-- Footer / İletişim Bölümü: Telefon Numarası Tekrar Eklendi -->
+    <!-- Yayınlar ve Ödüller Bölümü: TEKRAR EKLENDİ -->
+    <section class="py-20 bg-slate-900/40 relative z-10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-8 section-title font-futuristic text-glow">Publications & Awards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-panel p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-book-open text-sky-400"></i> Publications</h3>
+                    <ul class="space-y-6 text-sm text-slate-300">
+                        <li class="pl-4 border-l-2 border-sky-500/30 hover:border-sky-500 transition-colors">
+                            <a href="https://ieeexplore.ieee.org/document/10304947" target="_blank" class="group block">
+                                <strong class="text-white group-hover:text-sky-400 transition-colors">Öziç, M. Ü., Yılmaz, A. S., et al. (2023).</strong><br>
+                                <span class="group-hover:text-sky-100 transition-colors">"An Approach to Classifying Breast Density Level Using Deep Learning-Based Segmentation Model..."</span><br>
+                                <em class="text-sky-400 block mt-1">ISMSIT IEEE Conference Paper</em>
+                            </a>
+                        </li>
+                        <li class="pl-4 border-l-2 border-sky-500/30 hover:border-sky-500 transition-colors">
+                            <a href="https://dergipark.org.tr/en/pub/bitlisfen/issue/81610/1364332" target="_blank" class="group block">
+                                <strong class="text-white group-hover:text-sky-400 transition-colors">Öziç, M. Ü., Yılmaz, A. S., et al. (2023).</strong><br>
+                                <span class="group-hover:text-sky-100 transition-colors">"A Comparative Study of Breast Mass Detection Using YOLOv8 Deep Learning Model..."</span><br>
+                                <em class="text-sky-400 block mt-1">Bitlis Eren Univ J Sci & Technol</em>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-trophy text-yellow-400"></i> Awards</h3>
+                    <ul class="space-y-6 text-sm text-slate-300">
+                        <li class="flex items-start gap-4 p-4 bg-slate-800/40 rounded-lg border border-white/5">
+                            <span class="text-yellow-400 text-xl">★</span>
+                            <div>
+                                <strong class="text-white block text-base">Denizli Metropolitan Municipality Tech Award</strong>
+                                <span class="text-slate-500 font-mono text-xs">2023</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4 p-4 bg-slate-800/40 rounded-lg border border-white/5">
+                            <span class="text-yellow-400 text-xl">★</span>
+                            <div>
+                                <strong class="text-white block text-base">TÜBİTAK 2209-A Research Grant</strong>
+                                <span class="text-slate-500 font-mono text-xs">Thesis Funding</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / İletişim Bölümü -->
     <footer id="contact" class="py-16 mt-auto relative z-10 border-t border-slate-800 bg-slate-900">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-8 font-futuristic text-glow">Let's Design the Future Together</h2>
@@ -439,7 +475,7 @@
                     <i class="fas fa-map-marker-alt text-sky-500"></i>
                     <span>Izmir, Turkey</span>
                 </div>
-                <!-- Telefon Numarası (Tekrar Eklendi) -->
+                <!-- Telefon Numarası -->
                 <div class="flex items-center justify-center gap-3">
                     <i class="fas fa-phone text-sky-500"></i>
                     <span>+90 534 087 9974</span>
